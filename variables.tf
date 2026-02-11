@@ -19,7 +19,7 @@ EOT
     name                = string
     resource_group_name = string
     source              = string
-    condition           = optional(string, "true")
+    condition           = optional(string) # Default: "true"
   }))
 }
 
