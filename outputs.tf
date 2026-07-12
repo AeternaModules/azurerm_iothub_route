@@ -1,3 +1,7 @@
+output "iothub_routes_id" {
+  description = "Map of id values across all iothub_routes, keyed the same as var.iothub_routes"
+  value       = { for k, v in azurerm_iothub_route.iothub_routes : k => v.id }
+}
 output "iothub_routes_condition" {
   description = "Map of condition values across all iothub_routes, keyed the same as var.iothub_routes"
   value       = { for k, v in azurerm_iothub_route.iothub_routes : k => v.condition }
